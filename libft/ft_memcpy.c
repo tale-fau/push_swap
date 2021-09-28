@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:55 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:50:00 by tale-fau         ###   ########.fr       */
+/*   Created: 2020/12/04 17:06:40 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/08/08 20:24:31 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	sa(char *a)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	tmp;
+	size_t	i;
 
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
-}
-
-void	sb(char *b)
-{
-	int	tmp;
-
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
-}
-
-void	ss(char *a, char *b)
-{
-	sa(a);
-	sb(b);
+	i = 0;
+	if (dest == src)
+		return (dest);
+	while (i < n)
+	{
+		((char *)dest)[i] = ((char *)src)[i];
+		i++;
+	}
+	return (dest);
 }

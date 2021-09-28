@@ -1,43 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tale-fau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:33 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:49:41 by tale-fau         ###   ########.fr       */
+/*   Created: 2020/12/09 17:58:23 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/06/02 16:01:02 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	pa(char *a, char *b)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t		i;
 
 	i = 0;
-	while (a[i])
-		i++;
-	while (i > 0)
+	while (i < n)
 	{
-		a[i] = a[i - 1];
-		i--;
-	}
-	a[0] = b[0];
-}
-
-void	pb(char *a, char *b)
-{
-	int	i;
-
-	i = 0;
-	while (b[i])
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 		i++;
-	while (i > 0)
-	{
-		b[i] = b[i - 1];
-		i--;
 	}
-	b[0] = a[0];
+	return (0);
 }

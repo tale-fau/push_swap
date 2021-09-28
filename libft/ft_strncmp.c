@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tale-fau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:55 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:50:00 by tale-fau         ###   ########.fr       */
+/*   Created: 2020/12/09 17:11:43 by tale-fau          #+#    #+#             */
+/*   Updated: 2020/12/09 19:16:43 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	sa(char *a)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	tmp;
+	size_t	i;
 
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
-}
-
-void	sb(char *b)
-{
-	int	tmp;
-
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
-}
-
-void	ss(char *a, char *b)
-{
-	sa(a);
-	sb(b);
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

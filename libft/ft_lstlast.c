@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:55 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:50:00 by tale-fau         ###   ########.fr       */
+/*   Created: 2021/01/07 21:47:10 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/01/07 23:32:24 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	sa(char *a)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	tmp;
-
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
-}
-
-void	sb(char *b)
-{
-	int	tmp;
-
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
-}
-
-void	ss(char *a, char *b)
-{
-	sa(a);
-	sb(b);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tale-fau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:55 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:50:00 by tale-fau         ###   ########.fr       */
+/*   Created: 2021/06/02 15:48:45 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/08/18 14:43:34 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	sa(char *a)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	tmp;
+	void	*ret;
 
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
-}
-
-void	sb(char *b)
-{
-	int	tmp;
-
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
-}
-
-void	ss(char *a, char *b)
-{
-	sa(a);
-	sb(b);
+	if (nmemb == 0 || size == 0)
+	{
+		nmemb = 1;
+		size = 1;
+	}
+	ret = malloc(size * nmemb);
+	if (ret == NULL)
+		return (NULL);
+	ft_bzero(ret, nmemb * size);
+	return (ret);
 }

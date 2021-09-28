@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:55 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:50:00 by tale-fau         ###   ########.fr       */
+/*   Created: 2020/12/09 16:57:57 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/06/05 17:31:27 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	sa(char *a)
+size_t	ft_strlen(const char *s)
 {
-	int	tmp;
+	size_t	i;
 
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
-}
-
-void	sb(char *b)
-{
-	int	tmp;
-
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
-}
-
-void	ss(char *a, char *b)
-{
-	sa(a);
-	sb(b);
+	i = 0;
+	if (s == NULL)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
 }

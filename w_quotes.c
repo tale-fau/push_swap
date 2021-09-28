@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   w_quotes.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:22 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/28 18:55:05 by tale-fau         ###   ########.fr       */
+/*   Created: 2021/09/28 18:27:00 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/09/28 18:55:56 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+int	w_quotes(t_astack *a, t_bstack *b, char *av)
 {
-	t_astack	a;
-	t_bstack	b;
-
-	if (ac > 2)
-	{
-		if (no_quotes(&a, &b, ac, av) == 1)
-			return (1);
-	}
-	else
-	{
-		if (w_quotes(&a, &b, av[1]) == 1)
-			return (1);
-	}
 	int		i;
+	int		num;
+	char	**tab;
+
 	i = 0;
-	while (i < 5)
+	tab = ft_split(av, ' ');
+	if (tab == NULL)
+		return (error(1));
+	a->size = ft_tablen(tab);
+	b->size = a->size;
+	a->stack = (int **)malloc(sizeof(int *) * a->size);
+	b->stack = (int **)malloc(sizeof(int *) * b->size);
+	if (a->stack == NULL || b->stack == NULL)
+		return (error(1));
+	while (tab[i])
 	{
-		printf(">> %i\n", a.stack[i]);
+		num = ft_atoi(tab[i]);
+		if (check_num(num, a) == 1)
+			return (error(2));
+		a->stack[i] = num;
 		i++;
 	}
-	//printf(">> %s\n", b);
-/* 	pa(a, b);
-	printf(">> %s\n", a);
-	printf(">> %s\n", b); */
 	return (0);
 }
