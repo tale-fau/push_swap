@@ -6,38 +6,18 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:33 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:49:41 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/09/29 18:40:49 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(char *a, char *b)
+void	pa(t_astack *a, t_bstack *b)
 {
-	int	i;
-
-	i = 0;
-	while (a[i])
-		i++;
-	while (i > 0)
-	{
-		a[i] = a[i - 1];
-		i--;
-	}
-	a[0] = b[0];
+	a->stack[0] = b->stack[0];
 }
 
-void	pb(char *a, char *b)
+void	pb(t_astack *a, t_bstack *b)
 {
-	int	i;
-
-	i = 0;
-	while (b[i])
-		i++;
-	while (i > 0)
-	{
-		b[i] = b[i - 1];
-		i--;
-	}
-	b[0] = a[0];
+	b->stack[0] = a->stack[0];
 }
