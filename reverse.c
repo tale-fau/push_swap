@@ -6,18 +6,18 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:56:26 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/29 19:24:14 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/09/30 19:21:13 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rra(t_astack *a)
+void	rra(t_astack *a, int bool)
 {
 	int		i;
 	int		*tmp;
 
-	i = a->size;
+	i = a->size - 1;
 	tmp = a->stack[a->size - 1];
 	while (i > 0)
 	{
@@ -25,25 +25,30 @@ void	rra(t_astack *a)
 		i--;
 	}
 	a->stack[0] = tmp;
+	if (bool == 0)
+		ft_putstr_fd("rra\n", 1);
 }
 
-void	rrb(t_bstack *b)
+void	rrb(t_bstack *b, int bool)
 {
 	int	i;
 	int	*tmp;
 
-	i = b->size;
-	tmp = b->stack[a->size - 1];
-	while (i < 0)
+	i = b->size - 1;
+	tmp = b->stack[b->size - 1];
+	while (i > 0)
 	{
 		b->stack[i] = b->stack[i - 1];
 		i--;
 	}
 	b->stack[0] = tmp;
+	if (bool == 0)
+		ft_putstr_fd("rrb\n", 1);
 }
 
 void	rrr(t_astack *a, t_bstack *b)
 {
-	rra(a);
-	rrb(b);
+	rra(a, 1);
+	rrb(b, 1);
+	ft_putstr_fd("rrr\n", 1);
 }

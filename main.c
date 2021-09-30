@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:22 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/29 18:51:47 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/09/30 19:20:48 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	main(int ac, char **av)
 
 	if (ac > 2)
 	{
-		printf("test");
 		if (no_quotes(&a, &b, ac, av) == 1)
 			return (1);
 	}
@@ -31,21 +30,22 @@ int	main(int ac, char **av)
 	int		i;
 	i = 0;
 	while (i < 5)
-	{
-		printf(">> %i\n", a.stack[i]);
-		i++;
-	}
-	rra(&a);
-	printf("\n");
+		b.stack[i++] = 0;
 	i = 0;
 	while (i < 5)
 	{
-		printf(">> %i\n", a.stack[i]);
+		printf(">> %i || >> %i\n", a.stack[i], b.stack[i]);
 		i++;
 	}
-	//printf(">> %s\n", b);
-/* 	pa(a, b);
-	printf(">> %s\n", a);
-	printf(">> %s\n", b); */
+	pb(&a, &b);
+	pb(&a, &b);
+	pb(&a, &b);
+	rrr(&a, &b);
+	i = 0;
+	while (i < 5)
+	{
+		printf(">> %i || >> %i\n", a.stack[i], b.stack[i]);
+		i++;
+	}
 	return (0);
 }

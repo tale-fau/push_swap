@@ -6,48 +6,49 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:44 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/27 15:49:51 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/09/30 19:21:19 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(char *a)
+void	ra(t_astack *a, int bool)
 {
 	int	tmp;
 	int	i;
-	int	max;
 
 	i = 0;
-	max = ft_strlen(a) - 1;
-	tmp = a[0];
-	while (i <= max)
+	tmp = a->stack[0];
+	while (i < a->size - 1)
 	{
-		a[i] = a[i + 1];
+		a->stack[i] = a->stack[i + 1];
 		i++;
 	}
-	a[max] = tmp;
+	a->stack[a->size - 1] = tmp;
+	if (bool == 0)
+		ft_putstr_fd("ra\n", 1);
 }
 
-void	rb(char *b)
+void	rb(t_bstack *b, int bool)
 {
 	int	tmp;
 	int	i;
-	int	max;
 
 	i = 0;
-	max = ft_strlen(b) - 1;
-	tmp = b[0];
-	while (i <= max)
+	tmp = b->stack[0];
+	while (i < b->size - 1)
 	{
-		b[i] = b[i + 1];
+		b->stack[i] = b->stack[i + 1];
 		i++;
 	}
-	b[max] = tmp;
+	b->stack[b->size - 1] = tmp;
+	if (bool == 0)
+		ft_putstr_fd("rb\n", 1);
 }
 
-void	rr(char *a, char *b)
+void	rr(t_astack *a, t_bstack *b)
 {
-	ra(a);
-	rb(b);
+	ra(a, 1);
+	rb(b, 1);
+	ft_putstr_fd("rr\n", 1);
 }

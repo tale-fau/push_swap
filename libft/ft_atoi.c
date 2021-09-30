@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tale-fau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 16:33:05 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/01/02 13:14:22 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/09/30 19:35:18 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	is_blank(char c)
 	return (0);
 }
 
-int	ft_atoi(const char *c)
+long int	ft_atoi(const char *c)
 {
-	int	i;
-	int	sign;
-	int	ret;
+	int			i;
+	int			sign;
+	long int	ret;
 
 	ret = 0;
 	sign = 1;
