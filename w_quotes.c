@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 18:27:00 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/30 19:43:29 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/01 18:27:58 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	check_strsize(char *num)
 	return (0);
 }
 
-int	set_stack(t_astack *a, t_bstack *b, int len)
+int	set_stack(t_stack *a, t_stack *b, int len)
 {
 	a->size = len;
 	b->size = 0;
@@ -33,7 +33,7 @@ int	set_stack(t_astack *a, t_bstack *b, int len)
 	return (0);
 }
 
-int	w_quotes(t_astack *a, t_bstack *b, char *av)
+int	w_quotes(t_stack *a, t_stack *b, char *av)
 {
 	int				i;
 	long int		num;

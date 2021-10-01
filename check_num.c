@@ -6,13 +6,13 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 18:37:28 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/29 14:58:32 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/01 18:35:17 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_num(int num, t_astack *a)
+int	check_num(int num, t_stack *a)
 {
 	int	i;
 

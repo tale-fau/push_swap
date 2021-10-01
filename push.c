@@ -6,13 +6,13 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:33 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/30 18:36:36 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/01 18:26:25 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	not_empty_astack(t_astack *a, t_bstack *b)
+void	not_empty_astack(t_stack *a, t_stack *b)
 {
 	int	i;
 
@@ -35,7 +35,7 @@ void	not_empty_astack(t_astack *a, t_bstack *b)
 	b->stack[b->size] = 0;
 }
 
-void	pa(t_astack *a, t_bstack *b)
+void	pa(t_stack *a, t_stack *b)
 {
 	int	i;
 
@@ -59,7 +59,7 @@ void	pa(t_astack *a, t_bstack *b)
 	ft_putstr_fd("pa\n", 1);
 }
 
-void	not_empty_bstack(t_astack *a, t_bstack *b)
+void	not_empty_bstack(t_stack *a, t_stack *b)
 {
 	int	i;
 
@@ -81,7 +81,7 @@ void	not_empty_bstack(t_astack *a, t_bstack *b)
 	}
 }
 
-void	pb(t_astack *a, t_bstack *b)
+void	pb(t_stack *a, t_stack *b)
 {
 	int	i;
 

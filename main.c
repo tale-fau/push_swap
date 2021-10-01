@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:22 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/30 19:20:48 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/01 18:34:35 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main(int ac, char **av)
 {
-	t_astack	a;
-	t_bstack	b;
+	t_stack	a;
+	t_stack	b;
 
 	if (ac > 2)
 	{
@@ -37,10 +37,18 @@ int	main(int ac, char **av)
 		printf(">> %i || >> %i\n", a.stack[i], b.stack[i]);
 		i++;
 	}
+	rra(&a, 0);
+	pb(&a, &b);
+	rra(&a, 0);
 	pb(&a, &b);
 	pb(&a, &b);
 	pb(&a, &b);
-	rrr(&a, &b);
+	pb(&a, &b);
+	pa(&a, &b);
+	pa(&a, &b);
+	pa(&a, &b);
+	pa(&a, &b);
+	pa(&a, &b);
 	i = 0;
 	while (i < 5)
 	{

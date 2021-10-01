@@ -6,13 +6,13 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:44 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/30 19:21:19 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/01 18:26:03 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_astack *a, int bool)
+void	ra(t_stack *a, int bool)
 {
 	int	tmp;
 	int	i;
@@ -29,7 +29,7 @@ void	ra(t_astack *a, int bool)
 		ft_putstr_fd("ra\n", 1);
 }
 
-void	rb(t_bstack *b, int bool)
+void	rb(t_stack *b, int bool)
 {
 	int	tmp;
 	int	i;
@@ -46,7 +46,7 @@ void	rb(t_bstack *b, int bool)
 		ft_putstr_fd("rb\n", 1);
 }
 
-void	rr(t_astack *a, t_bstack *b)
+void	rr(t_stack *a, t_stack *b)
 {
 	ra(a, 1);
 	rb(b, 1);
