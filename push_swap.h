@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:45:48 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/01 18:34:29 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/05 19:09:23 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,15 @@
 typedef struct s_stack
 {
 	int			size;
-	int			**stack;
+	int			rank;
+	int			*stack;
 }	t_stack;
 
 int		no_quotes(t_stack *a, t_stack *b, int ac, char **av);
 int		w_quotes(t_stack *a, t_stack *b, char *av);
-int		check_num(int num, t_stack *a);
+int		check_num(int num, t_stack *a, int len);
 int		error(int i);
+void	order(t_stack *a, t_stack *b);
 void	pa(t_stack *a, t_stack *b);
 void	pb(t_stack *a, t_stack *b);
 void	ra(t_stack *a, int bool);
@@ -38,5 +40,7 @@ void	ss(t_stack *a, t_stack *b);
 void	rra(t_stack *a, int bool);
 void	rrb(t_stack *b, int bool);
 void	rrr(t_stack *a, t_stack *b);
+
+void	debug(t_stack *s);
 
 #endif

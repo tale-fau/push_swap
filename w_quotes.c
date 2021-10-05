@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 18:27:00 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/01 18:27:58 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/05 18:54:50 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	set_stack(t_stack *a, t_stack *b, int len)
 {
 	a->size = len;
 	b->size = 0;
-	a->stack = (int **)malloc(sizeof(int *) * len);
-	b->stack = (int **)malloc(sizeof(int *) * len);
+	a->stack = (int *)malloc(sizeof(int) * len);
+	b->stack = (int *)malloc(sizeof(int) * len);
 	if (a->stack == NULL || b->stack == NULL)
 		return (error(1));
 	return (0);
