@@ -6,16 +6,24 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 16:49:53 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/29 14:49:50 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/06 12:52:59 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_isdigit(int c)
+int	ft_isdigit(char *str)
 {
-	if (c >= '0' && c <= '9')
-		return (0);
-	else
-		return (1);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if ((!(str[i] >= '0' && str[i] <= '9')) && (!(str[i] == '-'))
+			&& (!(str[i] == '+')))
+			return (1);
+		i++;
+	}
+	return (0);
 }

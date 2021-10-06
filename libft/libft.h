@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 17:10:31 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/09/30 17:13:56 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/06 12:10:19 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 size_t				ft_tablen(char **s);
 int					ft_isalpha(int c);
-int					ft_isdigit(int c);
+int					ft_isdigit(char *str);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);

@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:56:26 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/01 18:14:33 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/06 11:49:34 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	rra(t_stack *a, int bool)
 {
 	int		i;
-	int		*tmp;
+	int		tmp;
 
 	i = a->size - 1;
 	tmp = a->stack[a->size - 1];
@@ -32,7 +32,7 @@ void	rra(t_stack *a, int bool)
 void	rrb(t_stack *b, int bool)
 {
 	int	i;
-	int	*tmp;
+	int	tmp;
 
 	i = b->size - 1;
 	tmp = b->stack[b->size - 1];
