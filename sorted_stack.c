@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   sorted_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 11:34:30 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/07 14:36:36 by tale-fau         ###   ########.fr       */
+/*   Created: 2021/10/07 12:07:28 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/10/07 12:10:04 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_swap(int *a, int *b)
+int	sorted_stack(t_stack *a)
 {
-	int	t;
+	int	i;
 
-	t = *a;
-	*a = *b;
-	*b = t;
+	i = 0;
+	while (i < a->size)
+	{
+		if (a->stack[i] + 1 < a->stack[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }

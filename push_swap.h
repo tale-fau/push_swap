@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:45:48 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/06 12:02:32 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/07 15:38:21 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ void	ss(t_stack *a, t_stack *b);
 void	rra(t_stack *a, int bool);
 void	rrb(t_stack *b, int bool);
 void	rrr(t_stack *a, t_stack *b);
+void	free_stack(t_stack *a, t_stack *b);
+int		sorted_stack(t_stack *a);
+int		clone_stack(t_stack *a);
+int		easy_sort(t_stack *a, t_stack *b)
 
 void	debug(t_stack *s);
 

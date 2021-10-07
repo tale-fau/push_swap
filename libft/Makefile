@@ -6,7 +6,7 @@
 #    By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/09 19:01:04 by tale-fau          #+#    #+#              #
-#    Updated: 2021/10/07 11:36:19 by tale-fau         ###   ########.fr        #
+#    Updated: 2021/10/07 14:35:41 by tale-fau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ SRCS		=	ft_memset.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
 			ft_strjoinfree.c \
-			ft_swap.c
+			ft_swap.c 
 
 SRCS_BONUS	=	ft_lstnew.c \
 			ft_lstadd_front.c \

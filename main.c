@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:22 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/06 14:19:23 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/07 14:37:59 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,11 @@ int	main(int ac, char **av)
 		if (w_quotes(&a, &b, av[1]) == 1)
 			return (1);
 	}
-	order(&a, &b);
-	//debug(&a);
+	if (sorted_stack(&a) == 1)
+	{
+		free_stack(&a, &b);
+		return (0);
+	}
+	free_stack(&a, &b);
 	return (0);
 }

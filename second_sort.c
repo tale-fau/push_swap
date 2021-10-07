@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   second_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 11:34:30 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/07 14:36:36 by tale-fau         ###   ########.fr       */
+/*   Created: 2021/10/07 15:09:37 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/10/07 17:54:34 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_swap(int *a, int *b)
+void	sorting_algo(t_stack *a, t_stack *b, char id)
 {
-	int	t;
+	int	ret;
+	int	rota_count;
 
-	t = *a;
-	*a = *b;
-	*b = t;
+	rota_count = 0;
+	if (sort_first_cases(a, b) == 1)
+		return ;
+	ret = main_partition(a, b, id)
+	if (a->size != 2)
 }
