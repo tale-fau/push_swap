@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/07 14:34:59 by tale-fau          #+#    #+#              #
-#    Updated: 2021/10/07 14:35:01 by tale-fau         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME	        =		push_swap
 
 SRCS            =       $(wildcard ./*.c)
@@ -26,11 +14,11 @@ OBJS            =       ${SRCS:.c=.o}
 
 RM          =       rm -rf
 
-FLAGS       =       -Wall -Wextra -Werror
+FLAGS       =       -Wall -Wextra -Werror -g
 
 .c.o:
 					@${CC} ${FLAGS} -I${INCLUDES_DIR} -c $< -o ${<:.c=.o}
-					@echo "\x1b[32mBIEN JOUE\033[0m ${<:.s=.o}"
+					@echo "\x1b[32mloaded\033[0m ${<:.s=.o}"
 
 all:			${NAME}
 

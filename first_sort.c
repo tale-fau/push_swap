@@ -6,13 +6,13 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:04:37 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/07 17:54:36 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/08 23:58:36 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	partition(int str[], int low, int high)
+/* 
+int	partition(int *str, int low, int high)
 {
 	int	pivot;
 	int	i;
@@ -21,11 +21,11 @@ int	partition(int str[], int low, int high)
 	pivot = str[high];
 	i = (low - 1);
 	j = low;
-	while (j <= high - 1)
+	while (j < high)
 	{
 		if (str[j] <= pivot)
 		{
-			i++;
+			++i;
 			ft_swap(&str[i], &str[j]);
 		}
 		j++;
@@ -34,9 +34,11 @@ int	partition(int str[], int low, int high)
 	return (i + 1);
 }
 
-void	first_quicksort(int str[], int low, int high)
+void	first_quicksort(int *str, int low, int high)
 {
 	int	ret;
+
+	debug(str, 13);
 
 	if (low < high)
 	{
@@ -45,25 +47,66 @@ void	first_quicksort(int str[], int low, int high)
 		first_quicksort(str, ret + 1, high);
 	}
 }
+ */
 
-int	clone_stack(t_stack *a)
+/* static int	partition(int *tab, int low, int high)
 {
-	t_stack	a_clone;
-	int		i;
-	int		mediane;
+	int	pivot;
+	int	i;
+	int	j;
 
-	i = 0;
-	a_clone.size = a->size;
-	a_clone.stack = (int *)malloc(sizeof(int) * a_clone.size);
-	if (a_clone.stack == NULL)
-		return (1);
-	while (i < a_clone.size)
+	pivot = tab[high];
+	i = (low - 1);
+	j = low;
+	while (j < high)
 	{
-		a_clone.stack[i] = a->stack[i];
-		i++;
+		if (tab[j] <= pivot)
+		{
+			++i;
+			ft_swap(&tab[i], &tab[j]);
+		}
+		++j;
 	}
-	first_quicksort(a_clone.stack, 0, i);
-	mediane = a_clone.stack[(a_clone.size - 1) / 2];
-	free(a_clone.stack);
-	return (mediane);
+	ft_swap(&tab[i + 1], &tab[high]);
+	return (i + 1);
+}
+
+void	first_quicksort(int *tab, int low, int high)
+{
+	int	p_i;
+
+	if (low < high)
+	{
+		p_i = partition(tab, low, high);
+		first_quicksort(tab, low, p_i - 1);
+		first_quicksort(tab, p_i + 1, high);
+	}
+} */
+
+void	ft_trie(int *clone, int size)
+{
+	int	tmp;
+	int i;
+
+	printf("Stack clone : \n");
+	for(int i = 0; i < size; i++)
+		printf("%d\n", clone[i]);
+	printf("FINNN---------------\n");
+	
+	printf("Valeur de size : %d\n", size);
+	i = -1;
+	while (clone[++i])
+	{
+		if (clone[i] > clone[i + 1])
+		{
+			tmp = clone[i];
+			clone[i] = clone[i + 1];
+			clone[i + 1] = tmp;
+			i = -1;
+		}
+	}
+	printf("Stack clone : \n");
+	for(int i = 0; i < size; i++)
+		printf("%d\n", clone[i]);
+	printf("FINNN---------------\n");
 }

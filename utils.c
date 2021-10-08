@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 15:49:22 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/08 23:34:52 by tale-fau         ###   ########.fr       */
+/*   Created: 2021/10/07 19:31:48 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/10/08 22:20:20 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	to_pushes(t_stack *a, t_stack *b, int ret, char id)
 {
-	t_stack	a;
-	t_stack	b;
-	int		size;
-
-	if (ac < 2)
-		return (1);
-	if (ac > 2)
-	{
-		if (no_quotes(&a, &b, ac, av) == 1)
-			return (1);
-	}
+	if (id == 'a')
+		pa(a, b);
 	else
-	{
-		if (w_quotes(&a, &b, av[1]) == 1)
-			return (1);
-	}
-	if (sorted_stack(&a) == 1)
-	{
-		free_stack(&a, &b);
-		return (0);
-	}
-	size = a.size;
-	sc_quicksort(&a, &b, size, 'a');
-	free_stack(&a, &b);
-	return (0);
+		pb(a, b);
+	ret--;
+}
+
+void	to_reverse(t_stack *a, t_stack *b, char id)
+{
+	if (id == 'a')
+		rr(a, 'a');
+	else
+		rr(b, 'b');
+}
+
+void	to_rotate(t_stack *a, t_stack *b, char id)
+{
+	if (id == 'a')
+		rs(a, 'a');
+	else
+		rs(b, 'b');
 }

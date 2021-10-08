@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:07:28 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/07 12:10:04 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/08 23:34:06 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	sorted_stack(t_stack *a)
 	i = 0;
 	while (i < a->size)
 	{
-		if (a->stack[i] + 1 < a->stack[i])
-			return (1);
+		if (a->stack[i + 1] < a->stack[i])
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
