@@ -6,13 +6,13 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:56:26 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/09 15:28:41 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/09 17:53:29 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rr(t_stack *s, char id)
+void	reverse(t_stack *s, char id)
 {
 	int		i;
 	int		tmp;

@@ -1,62 +1,80 @@
+a->size =7et size (avec id == a) =7
+test 8
 pb
-pb
-pb
-ra
-ra
-pb
-ra
-ra
-pb
-ra
+test 8
 pb
 ra
 ra
-pb
-pb
-pb
 ra
+test 8
 pb
+test 8
 pb
+SIZE - RET AVANT QUICKSORT 1 = 3
+a->size =3et size (avec id == a) =3
 ra
-ra
+RET AVANT QUICKSORT 2 PRIM = 4
+b->size =4et size (avec id == b) =4
+rb
+test 9
+AVANT PA valeur de a->size =3
+pa
+APRES PA valeur de a->size =4
+test 9
+AVANT PA valeur de a->size =4
+pa
+APRES PA valeur de a->size =5
+test 9
+AVANT PA valeur de a->size =5
+pa
+APRES PA valeur de a->size =6
+SIZE - RET AVANT QUICKSORT 1 = 1
+b->size =1et size (avec id == b) =1
+RET AVANT QUICKSORT 2BIS = 3
+a->size =6et size (avec id == a) =3
+sa
+Reverse 1
 rra
-pa
-pa
-pa
-rb
-rrb
 pb
 pb
 pb
+AVANT PA valeur de a->size =3
 pa
+APRES PA valeur de a->size =4
+AVANT PA valeur de a->size =4
 pa
+APRES PA valeur de a->size =5
+AVANT PA valeur de a->size =5
 pa
+APRES PA valeur de a->size =6
+AVANT PA valeur de a->size =6
 pa
-rb
-pa
-rb
-pa
-pa
-rb
-pa
-rrb
-sb
-pb
-ra
-pb
-ra
-rra
-rra
-pa
-pa
-pb
-pb
-pb
-pb
-pa
-pa
-pa
-pa
-pa
-pa
-pa
+APRES PA valeur de a->size =7
+VALEUR DE SIZE = 7 a->size : 7
+VALEUR DE SIZE = 3 a->size : 3
+VALEUR DE a->size : 3
+VALEUR DE SIZE = 3 a->size : 6
+VALEUR DE a->size : 6
+Stack A 1: ---------------------------
+6
+4
+2
+7
+8
+9
+Stack A 2: ---------------------------
+9
+4
+6
+2
+7
+8
+FINNNNNNNNNN--------------------------------------------
+STACK FINAL :::
+0
+9
+4
+6
+2
+7
+8
