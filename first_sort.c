@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:04:37 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/08 23:58:36 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/09 15:28:38 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,14 +88,13 @@ void	ft_trie(int *clone, int size)
 	int	tmp;
 	int i;
 
-	printf("Stack clone : \n");
+/* 	printf("Stack clone : \n");
 	for(int i = 0; i < size; i++)
 		printf("%d\n", clone[i]);
 	printf("FINNN---------------\n");
-	
-	printf("Valeur de size : %d\n", size);
+	printf("Valeur de size : %d\n", size); */
 	i = -1;
-	while (clone[++i])
+	while (++i < size - 1)
 	{
 		if (clone[i] > clone[i + 1])
 		{
@@ -105,8 +104,8 @@ void	ft_trie(int *clone, int size)
 			i = -1;
 		}
 	}
-	printf("Stack clone : \n");
+/* 	printf("Stack clone : \n");
 	for(int i = 0; i < size; i++)
 		printf("%d\n", clone[i]);
-	printf("FINNN---------------\n");
+	printf("FINNN---------------\n"); */
 }

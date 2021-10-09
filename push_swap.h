@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:45:48 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/08 23:55:57 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/09 15:28:41 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ void	first_quicksort(int str[], int low, int high);
 void	sc_quicksort(t_stack *a, t_stack *b, int size, char id);
 int		sorted_stack(t_stack *a);
 int		clone_stack(t_stack *s, int size);
-int		easy_sort(t_stack *s, int size, char id);
+int		easy_sort_a(t_stack *a, int size);
+int		easy_sort_b(t_stack *b, int size);
 void	ft_trie(int *clone, int size);
 
 void	debug(int *s, int size);
