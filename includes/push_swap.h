@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:45:48 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 12:14:34 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 14:11:18 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {

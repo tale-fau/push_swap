@@ -6,7 +6,7 @@
 #    By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/09 19:01:04 by tale-fau          #+#    #+#              #
-#    Updated: 2021/10/07 14:35:41 by tale-fau         ###   ########.fr        #
+#    Updated: 2021/10/12 14:38:52 by tale-fau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,13 @@ SRCS		=	ft_memset.c \
 			ft_strlcpy.c \
 			ft_strlcat.c \
 			ft_strnstr.c \
-			ft_atoi.c \
 			ft_calloc.c \
 			ft_strdup.c \
 			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_split.c \
+			ft_atoi.c \
 			ft_itoa.c \
 			ft_strmapi.c \
 			ft_putchar_fd.c \

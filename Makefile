@@ -1,8 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/10/12 14:22:52 by tale-fau          #+#    #+#              #
+#    Updated: 2021/10/12 14:22:53 by tale-fau         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	        =		push_swap
 
-SRCS            =       $(wildcard ./*.c)
+SRCS            =       $(wildcard srcs/*.c)
 
-INCLUDES_DIR     =       ./
+INCLUDES_DIR     =       includes/
 
 LIB_DIR         =       libft/
 
@@ -14,11 +26,11 @@ OBJS            =       ${SRCS:.c=.o}
 
 RM          =       rm -rf
 
-FLAGS       =       -Wall -Wextra -Werror -g
+FLAGS       =       -Wall -Wextra -Werror
 
 .c.o:
 					@${CC} ${FLAGS} -I${INCLUDES_DIR} -c $< -o ${<:.c=.o}
-					@echo "\x1b[32mloaded\033[0m ${<:.s=.o}"
+					@echo "\x1b[32m[LOADED]\033[0m ${<:.s=.o}"
 
 all:			${NAME}
 

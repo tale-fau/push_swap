@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 17:10:43 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 12:14:56 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 14:25:50 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	check_size(char *num)
 	else if (ft_strlen(num) > 10)
 		return (1);
 	if (ft_isdigit(num) == 1)
-		return (error());
+		return (1);
 	return (0);
 }
 
