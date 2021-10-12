@@ -6,7 +6,7 @@
 #    By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/12 14:22:52 by tale-fau          #+#    #+#              #
-#    Updated: 2021/10/12 16:06:00 by tale-fau         ###   ########.fr        #
+#    Updated: 2021/10/12 17:25:12 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJS            =       ${SRCS:.c=.o}
 
 RM          =       rm -rf
 
-FLAGS       =       -Wall -Wextra -Werror
+FLAGS       =       -Wall -Wextra -Werror -g3
 
 .c.o:
 					@${CC} ${FLAGS} -I${INCLUDES_DIR} -c $< -o ${<:.c=.o}

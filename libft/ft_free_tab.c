@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_stack.c                                       :+:      :+:    :+:   */
+/*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 11:52:52 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 17:23:30 by user42           ###   ########.fr       */
+/*   Created: 2021/09/28 18:37:28 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/10/12 17:35:09 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	free_stack(t_stack *a, t_stack *b)
+void	ft_free_tab(char **str)
 {
-/*	int i;
+	int	i;
 
 	i = 0;
-	while (a->stack && a->stack[i])
+	if (str)
 	{
-		free(&a->stack[i]);
-		i++;
+		while (str[i])
+		{
+			if (str[i] != NULL)
+				free(str[i]);
+			i++;
+		}
+		free(str);
+		str = NULL;
 	}
-	i = 0;
-	while (b->stack && b->stack[i])
-	{
-		free(&b->stack[i]);
-		i++;
-	}*/
-	free(a->stack);
-	free(b->stack);
-	a->stack = NULL;
-	b->stack = NULL;
 }

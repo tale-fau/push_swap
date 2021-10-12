@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 15:37:28 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 14:02:53 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 17:24:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,7 @@ int	find_min(t_stack *a)
 void	sort_five(t_stack *a, t_stack *b)
 {
 	int	pivot;
-	int	i;
 
-	i = 0;
 	pivot = 2;
 	while (b->size != 3)
 	{

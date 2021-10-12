@@ -6,7 +6,7 @@
 #    By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/09 19:01:04 by tale-fau          #+#    #+#              #
-#    Updated: 2021/10/12 15:03:45 by tale-fau         ###   ########.fr        #
+#    Updated: 2021/10/12 17:36:05 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ NAME		=	libft.a
 SRCS		=	ft_memset.c \
 			ft_bzero.c \
 			ft_memcpy.c \
+			ft_free_tab.c \
 			ft_memccpy.c \
 			ft_memmove.c \
 			ft_memchr.c \
