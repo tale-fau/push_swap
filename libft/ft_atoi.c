@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 16:33:05 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 14:40:42 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 15:08:25 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	is_blank(char c)
 	return (0);
 }
 
-long int	ft_atoi(const char *c)
+long int	ft_atoi(const char *str)
 {
-	int			i;
+/* 	int			i;
 	int			sign;
 	long int	ret;
 
@@ -38,11 +38,30 @@ long int	ft_atoi(const char *c)
 		i++;
 	}
 	if (c[i] == '+' || c[i] == '-')
-		return (NULL);
+		return (-1);
 	while (c[i] >= '0' && c[i] <= '9')
 	{
 		ret = (ret * 10) + (c[i] - 48);
 		i++;
 	}
-	return (ret * sign);
+	return (ret * sign); */
+	int		i;
+	int		negative;
+	long	result;
+
+	i = 0;
+	negative = 1;
+	result = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			negative *= -1;
+	while (str[i] >= '0' && str[i] <= '9')
+		result = result * 10 + ((int)str[i++] - '0');
+	if (result < 0 && (negative == 1))
+		return (-1);
+	else if (result < 0 && (negative == -1))
+		return (0);
+	return (result * negative);
 }

@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:45:48 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 14:11:18 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 16:03:03 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
+# define MALLOC NULL
 
 typedef struct s_stack
 {

@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 18:27:00 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 14:28:16 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 17:09:12 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 
 int	check_strsize(char *num)
 {
-	if (num[0] == '-')
-	{
-		if (ft_strlen(num) > 11)
-			return (1);
-	}
-	else if (ft_strlen(num) > 10)
-		return (1);
 	if (ft_isdigit(num) == 1)
 		return (1);
 	return (0);
@@ -53,10 +46,16 @@ int	w_quotes(t_stack *a, t_stack *b, char *av)
 	while (tab[++i])
 	{
 		if (check_strsize(tab[i]) == 1)
+		{
+			free_stack(a, b);
 			return (error());
+		}
 		num = ft_atoi(tab[i]);
 		if (check_num(num, a, i + 1) == 1)
+		{
+			free_stack(a, b);
 			return (error());
+		}
 		a->stack[i] = num;
 	}
 	return (0);
