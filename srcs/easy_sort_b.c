@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 15:11:05 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 11:53:14 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 21:11:04 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,7 @@ int	sort_three_b(t_stack *b)
 			swap(b, 'b');
 		}
 		else
-		{
 			reverse(b, 'b');
-		}
 	}
 	return (1);
 }

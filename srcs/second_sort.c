@@ -6,17 +6,11 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 15:09:37 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 13:55:36 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 21:11:55 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	debug(int *s, int size)
-{
-	for (int i = 0; i < size; i++)
-		printf(">%d\n", s[i]);
-}
 
 void	sort_bigstack(t_stack *a, t_stack *b)
 {
@@ -45,15 +39,9 @@ void	sort_bigstack(t_stack *a, t_stack *b)
 void	sort_stack(t_stack *a, t_stack *b)
 {
 	if (a->size < 4)
-	{
 		easy_sort_a(a);
-	}
 	else if (a->size == 5)
-	{
 		sort_five(a, b);
-	}
 	else
-	{
 		sort_bigstack(a, b);
-	}
 }

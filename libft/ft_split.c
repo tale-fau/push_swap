@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 02:04:41 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/12 17:31:12 by user42           ###   ########.fr       */
+/*   Updated: 2021/10/12 21:10:12 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,3 @@ char	**ft_split(char const *str, char c)
 	ft_transfert(tab, str, c);
 	return (tab);
 }
-
