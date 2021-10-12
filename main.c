@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:49:22 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/09 15:52:15 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 14:03:13 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,12 @@ int	main(int ac, char **av)
 		free_stack(&a, &b);
 		return (0);
 	}
+	if (index_stack(&a) == 0)
+	{
+		return (error());
+	}
+	sort_stack(&a, &b);
 	size = a.size;
-	sc_quicksort(&a, &b, size, 'a');
-	printf("STACK FINAL :::\n");
-	for (int i = 0; i < a.size; i++)
-		printf("%d\n", a.stack[i]);
 	free_stack(&a, &b);
 	return (0);
 }

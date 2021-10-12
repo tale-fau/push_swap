@@ -6,7 +6,7 @@
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 15:11:05 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/09 16:52:49 by tale-fau         ###   ########.fr       */
+/*   Updated: 2021/10/12 11:53:14 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,13 @@ int	sort_three_b(t_stack *b)
 	return (1);
 }
 
-int	easy_sort_b(t_stack *b, int size)
+int	easy_sort_b(t_stack *b)
 {
-	//ft_putstr_fd("test 5\n", 1);
-	if (size < 2)
+	if (b->size < 2)
 		return (1);
-	else if (size == 2)
+	else if (b->size == 2)
 		return (sort_two_b(b));
-	else if (size == 3)
+	else if (b->size == 3)
 		return (sort_three_b(b));
 	else
 		return (0);

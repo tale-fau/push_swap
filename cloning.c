@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   cloning.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tale-fau <tale-fau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 19:31:48 by tale-fau          #+#    #+#             */
-/*   Updated: 2021/10/09 16:51:43 by tale-fau         ###   ########.fr       */
+/*   Created: 2021/10/12 11:35:20 by tale-fau          #+#    #+#             */
+/*   Updated: 2021/10/12 12:12:26 by tale-fau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	to_pushes(t_stack *a, t_stack *b, char id)
+int	*clone_stack(t_stack *s)
 {
-	if (id == 'a')
-		pa(a, b);
-	else
-		pb(a, b);
-}
+	int		*clone;
+	int		i;
 
-void	to_reverse(t_stack *a, t_stack *b, char id)
-{
-	//printf("test 7\n");
-	if (id == 'a')
-	{
-		ft_putstr_fd("reverse 3\n", 1);
-		reverse(a, 'a');
-	}
-	else
-		reverse(b, 'b');
-}
-
-void	to_rotate(t_stack *a, t_stack *b, char id)
-{
-	if (id == 'a')
-		rotate(a, 'a');
-	else
-		rotate(b, 'b');
+	i = -1;
+	clone = (int *)malloc(sizeof(int) * s->size);
+	if (clone == NULL)
+		return (NULL);
+	while (++i < s->size)
+		clone[i] = s->stack[i];
+	ft_trie(clone, s->size);
+	return (clone);
 }
